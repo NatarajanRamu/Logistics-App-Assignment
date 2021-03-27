@@ -1,0 +1,28 @@
+global with sharing class InvoiceController1 {
+    
+    public Customer__c cust {get;set;}
+     public Product2 prod {get;set;}
+    
+    public InvoiceController1(){
+        cust = [Select Name,
+                Pickup_Address__c,
+                Delivery_Address__c,
+                Phone__c,
+                Email__c
+                
+                from Customer__c LIMIT 1];
+        
+        prod = [Select Name,
+                ProductCode,
+                Order_ID__c,
+                Description,
+                Product_Price__c,
+                Driver_Name__c,
+                Driver_Contact_Number__c
+                
+                
+                from Product2 LIMIT 1];
+        
+    }
+}
+    
