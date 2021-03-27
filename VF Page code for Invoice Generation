@@ -1,0 +1,33 @@
+<apex:page Controller="InvoiceController1" >
+   <apex:form >
+        <apex:pageBlock >
+            
+            <apex:pageBlock title="INVOICE INFORMATION"></apex:pageBlock>
+            
+        <apex:pageBlockSection title="Customer Details">
+             <apex:outputField label="CUSTOMER NAME :" value="{! Cust.Name }"/>
+             <apex:outputField label="PICKUP ADDRESS :" value="{! Cust.Pickup_Address__c }"/>
+             <apex:outputField label="DELIVERY ADDRESS :" value="{! Cust.Delivery_Address__c }"/>
+             <apex:outputField label="PHONE NUMBER :" value="{! Cust.Phone__c }"/>
+             <apex:outputField label="EMAIL :" value="{! Cust.Email__c }"/>
+        </apex:pageBlockSection>
+            
+        <apex:pageBlockSection title="Product Details">
+            <apex:outputField label="ORDER ID :" value="{! prod.Order_ID__c }"/>
+             <apex:outputField label="PRODUCT NAME :" value="{! prod.Name }"/>
+            <apex:outputField label="PRODUCT CODE :" value="{! prod.ProductCode }"/>
+            <apex:outputField label="PRODUCT PRICE :" value="{! prod.Product_Price__c }"/>
+            <apex:outputField label="PRODUCT DESCRIPTION :" value="{! prod.Description }"/>
+            
+       </apex:pageBlockSection>
+        
+        
+        <apex:pageBlockSection title=" Driver Information">
+             <apex:outputField label="DRIVER NAME :" value="{! prod.Driver_Name__c }"/>
+             <apex:outputField label="DRIVER CONTACT NUMBER :" value="{! prod.Driver_Contact_Number__c }"/>
+             <apex:outputField label="DELIVERY CHARGES :" value="{! prod.Delivery_Charges__c }"/>
+        </apex:pageBlockSection>
+           
+        </apex:pageBlock>
+         </apex:form>
+   </apex:page>   
